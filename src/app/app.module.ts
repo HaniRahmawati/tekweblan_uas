@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -28,7 +29,8 @@ import { UserListComponent } from './user/user-list/user-list.component';
     FormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpClientModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent],

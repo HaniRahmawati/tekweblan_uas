@@ -16,12 +16,11 @@ export class UserssComponent implements OnInit {
     public dialogRef: MatDialogRef<UserssComponent>) { }
 
   ngOnInit() {
-    this.service.getUser();
+
   }
 
   onSubmit(){
     if (this.service.form.valid){
-      this.service.insertUser(this.service.form.value);
       this.service.form.reset();
       this.service.initializeFormGroup();
       this.onClose();

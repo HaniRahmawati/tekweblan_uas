@@ -16,14 +16,10 @@ export class UserListComponent implements OnInit {
     public dialog:MatDialog,
     public api:UserService) 
     {
-      this.getData();
+      
      }
-     getData()
-	{
-		this.api.status().subscribe(res=>{
-			console.log(res);
-		})
-	}
+   
+
 
   listData: MatTableDataSource<any>;
   displayedColumns: string[] = ['nama_depan', 'nama_belakang', 'username','email','password','actions'];
